@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "00611a85-8ad7-4f23-b5f4-ae7f66d9f6f7",
+		"name": "Parabank API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44025947",
+		"_collection_link": "https://zeyadmaher.postman.co/workspace/Zeyad-Maher's-Workspace~95ae75c2-deec-4dce-8c9c-5ad5a1486978/collection/44025947-00611a85-8ad7-4f23-b5f4-ae7f66d9f6f7?action=share&source=collection_link&creator=44025947"
+	},
+	"item": [
+		{
+			"name": "Get Account Info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=B6EE5ACACF41DC951387313A9B74BD3E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/services_proxy/bank/customers/12212/accounts",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"services_proxy",
+						"bank",
+						"customers",
+						"12212",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
