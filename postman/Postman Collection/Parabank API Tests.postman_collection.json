@@ -1,0 +1,1045 @@
+{
+	"info": {
+		"_postman_id": "6fdd8cb8-f88c-42c1-80ba-3711c5b91acd",
+		"name": "Parabank API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44025947",
+		"_collection_link": "https://zeyadmaher.postman.co/workspace/Zeyad-Maher's-Workspace~95ae75c2-deec-4dce-8c9c-5ad5a1486978/collection/44025947-6fdd8cb8-f88c-42c1-80ba-3711c5b91acd?action=share&source=collection_link&creator=44025947"
+	},
+	"item": [
+		{
+			"name": "Valid Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ahmed921",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/login.htm",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"login.htm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ahmed@921",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/login.htm",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"login.htm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registeration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "First Name:",
+							"value": "mark",
+							"type": "text"
+						},
+						{
+							"key": "Last Name:",
+							"value": "emad",
+							"type": "text"
+						},
+						{
+							"key": "Address:",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "City:",
+							"value": "gggg",
+							"type": "text"
+						},
+						{
+							"key": "State:",
+							"value": "gggg",
+							"type": "text"
+						},
+						{
+							"key": "Zip Code:",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Phone #:",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "SSN:",
+							"value": "gggg",
+							"type": "text"
+						},
+						{
+							"key": "Username:",
+							"value": "mark",
+							"type": "text"
+						},
+						{
+							"key": "Password:",
+							"value": "emad",
+							"type": "text"
+						},
+						{
+							"key": "Confirm:",
+							"value": "emad",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/register.htm",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"register.htm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account Info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=ED34566FA025973A42C9438E09215E60",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/services_proxy/bank/customers/12212/accounts",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"services_proxy",
+						"bank",
+						"customers",
+						"12212",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer Funds",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=83CE02CFEFE1547B7A540A1843D82134",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/services_proxy/bank/customers/12345/accounts",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"services_proxy",
+						"bank",
+						"customers",
+						"12345",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid Transfer Fund",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=83CE02CFEFE1547B7A540A1843D82134",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/services_proxy/bank/transfer?fromAccountId=12345&toAccountId=12345&amount=100&type\t=about:blank&title\t=Method Not Allowed&status\t=405&detail\t=Method 'GET' is not supported.&instance\t=/parabank/services_proxy/bank/transfer",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"services_proxy",
+						"bank",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "fromAccountId",
+							"value": "12345"
+						},
+						{
+							"key": "toAccountId",
+							"value": "12345"
+						},
+						{
+							"key": "amount",
+							"value": "100"
+						},
+						{
+							"key": "type\t",
+							"value": "about:blank"
+						},
+						{
+							"key": "title\t",
+							"value": "Method Not Allowed"
+						},
+						{
+							"key": "status\t",
+							"value": "405"
+						},
+						{
+							"key": "detail\t",
+							"value": "Method 'GET' is not supported."
+						},
+						{
+							"key": "instance\t",
+							"value": "/parabank/services_proxy/bank/transfer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Transfer Funds",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "JSESSIONID=83CE02CFEFE1547B7A540A1843D82134",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/services_proxy/bank/transfer?fromAccountId=12345&toAccountId=12345&amount=&type\t=\t\"about:blank\"&title\t=\"Method Not Allowed\"&status\t=405&detail\t=\"Method 'GET' is not supported.\"&instance\t=\"/parabank/services_proxy/bank/transfer\"",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"services_proxy",
+						"bank",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "fromAccountId",
+							"value": "12345"
+						},
+						{
+							"key": "toAccountId",
+							"value": "12345"
+						},
+						{
+							"key": "amount",
+							"value": ""
+						},
+						{
+							"key": "type\t",
+							"value": "\t\"about:blank\""
+						},
+						{
+							"key": "title\t",
+							"value": "\"Method Not Allowed\""
+						},
+						{
+							"key": "status\t",
+							"value": "405"
+						},
+						{
+							"key": "detail\t",
+							"value": "\"Method 'GET' is not supported.\""
+						},
+						{
+							"key": "instance\t",
+							"value": "\"/parabank/services_proxy/bank/transfer\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Open Account",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/services/bank/login/john/demo",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"services",
+						"bank",
+						"login",
+						"john",
+						"demo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Open Account Saving",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/services/bank/createAccount?customerId=12212&newAccountType=1&fromAccountId=13566",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"services",
+						"bank",
+						"createAccount"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "12212"
+						},
+						{
+							"key": "newAccountType",
+							"value": "1"
+						},
+						{
+							"key": "fromAccountId",
+							"value": "13566"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Open Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/services/bank/createAccount?customerId=12212&newAccountType=1&fromAccountId=99999",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"services",
+						"bank",
+						"createAccount"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "12212"
+						},
+						{
+							"key": "newAccountType",
+							"value": "1"
+						},
+						{
+							"key": "fromAccountId",
+							"value": "99999"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid Open Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/services/bank/createAccount?customerId=12212&newAccountType=1&fromAccountId=13566",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"services",
+						"bank",
+						"createAccount"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "12212"
+						},
+						{
+							"key": "newAccountType",
+							"value": "1"
+						},
+						{
+							"key": "fromAccountId",
+							"value": "13566"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC_052 - Search by Valid Transaction ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/services/bank/accounts/21114/transactions?Transaction-ID=28462",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"services",
+						"bank",
+						"accounts",
+						"21114",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "Transaction-ID",
+							"value": "28462"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "TC_052 - Search by Valid Transaction ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://parabank.parasoft.com/parabank/services/bank/accounts/21114/transactions?Transaction-ID=28462",
+							"protocol": "https",
+							"host": [
+								"parabank",
+								"parasoft",
+								"com"
+							],
+							"path": [
+								"parabank",
+								"services",
+								"bank",
+								"accounts",
+								"21114",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "Transaction-ID",
+									"value": "28462"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 05 May 2025 14:54:54 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/xml",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93b11360dc79078b-MRS"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<transactions>\n    <transaction>\n        <id>28462</id>\n        <accountId>21114</accountId>\n        <type>Debit</type>\n        <date>2025-05-05T00:00:00.000Z</date>\n        <amount>1200.00</amount>\n        <description>Bill Payment to Ahamed Shaban</description>\n    </transaction>\n</transactions>"
+				}
+			]
+		},
+		{
+			"name": "TC_053 - Search by Invalid Transaction ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"",
+							"pm.test(\"Invalid transaction returns correct error message\", function () {",
+							"    pm.response.to.have.status(400);",
+							"    ",
+							"});",
+							"",
+							"pm.test(\"Invalid transaction returns correct error message\", function () {",
+							"    pm.response.to.have.status(400);",
+							"    pm.expect(pm.response.text()).to.include(\"Could not find transaction\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/services/bank/transactions/99999999?Transaction-ID=999999",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"services",
+						"bank",
+						"transactions",
+						"99999999"
+					],
+					"query": [
+						{
+							"key": "Transaction-ID",
+							"value": "999999"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "TC_053 - Search by Invalid Transaction ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://parabank.parasoft.com/parabank/services/bank/transactions/99999999?Transaction-ID=999999",
+							"protocol": "https",
+							"host": [
+								"parabank",
+								"parasoft",
+								"com"
+							],
+							"path": [
+								"parabank",
+								"services",
+								"bank",
+								"transactions",
+								"99999999"
+							],
+							"query": [
+								{
+									"key": "Transaction-ID",
+									"value": "999999"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 03:21:29 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "939463856fb27173-ATH"
+						}
+					],
+					"cookie": [],
+					"body": "Could not find transaction #99999999"
+				}
+			]
+		},
+		{
+			"name": "TC_058 - Valid Bill Pay",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check if Bill Payment Complete message exists\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Bill Payment Complete\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							" \r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "mostafashaban",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "payee.name",
+							"value": "Mostafa Shaban",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "egeg",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "obour",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "122",
+							"type": "text"
+						},
+						{
+							"key": "zipCode",
+							"value": "05",
+							"type": "text"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "01225545749",
+							"type": "text"
+						},
+						{
+							"key": "accountNumber",
+							"value": "14676",
+							"type": "text"
+						},
+						{
+							"key": "verifyAccount",
+							"value": "14676",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "150",
+							"type": "text"
+						},
+						{
+							"key": "fromAccountId",
+							"value": "14898",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://parabank.parasoft.com/parabank/billpay.htm",
+					"protocol": "https",
+					"host": [
+						"parabank",
+						"parasoft",
+						"com"
+					],
+					"path": [
+						"parabank",
+						"billpay.htm"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "TC_058 - Valid Bill Pay",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "payee.name",
+									"value": "Mostafa Shaban",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "egeg",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "obour",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "122",
+									"type": "text"
+								},
+								{
+									"key": "zipCode",
+									"value": "05",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "01225545749",
+									"type": "text"
+								},
+								{
+									"key": "accountNumber",
+									"value": "14676",
+									"type": "text"
+								},
+								{
+									"key": "verifyAccount",
+									"value": "14676",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "fromAccountId",
+									"value": "14898",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://parabank.parasoft.com/parabank/billpay.htm",
+							"protocol": "https",
+							"host": [
+								"parabank",
+								"parasoft",
+								"com"
+							],
+							"path": [
+								"parabank",
+								"billpay.htm"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 06:00:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=ISO-8859-1"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "content-language",
+							"value": "en-US"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "93954beabd2d6f61-ATH"
+						}
+					],
+					"cookie": [],
+					"body": "\n\r\n\n\n<!-- <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n -->\n<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n\t\t<title>ParaBank | Error</title>\n\t\t<link href=\"template.css\" rel=\"stylesheet\"\n\t\t\ttype=\"text/css\" />\n\t\t<link href=\"style.css\" rel=\"stylesheet\"\n\t\t\ttype=\"text/css\" />\n\t\t<script src=\"webjars/jquery/3.7.1/jquery.min.js\"></script>\n\t</head>\n\n\t<body\n\t\t>\n\t\t<div id=\"mainPanel\">\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\r\n\r\n\r\n\r\n<div id=\"topPanel\">\r\n  <a href=\"admin.htm\"><img src=\"images/clear.gif\" width=\"56\" height=\"42\" border=\"0\" class=\"admin\"/></a>\r\n  <a href=\"index.htm\"><img src=\"images/logo.gif\" alt=\"ParaBank\" width=\"136\" height=\"31\" border=\"0\" class=\"logo\" title=\"ParaBank\"/></a>\r\n  <p class=\"caption\">Experience the difference</p>\r\n</div>\r\n<div id=\"headerPanel\" style=\"background: url(images/header-customer.jpg) 0 0 no-repeat;\">\r\n  \r\n\r\n\r\n<ul class=\"leftmenu\">\r\n  <li class=\"Solutions\">Solutions</li>\r\n  <li><a href=\"about.htm\">About Us</a></li>\r\n  <li><a href=\"services.htm\">Services</a></li>\r\n  <li><a href=\"http://www.parasoft.com/jsp/products.jsp\">Products</a></li>\r\n  <li><a href=\"http://www.parasoft.com/jsp/pr/contacts.jsp\">Locations</a></li>\r\n  <li><a href=\"admin.htm\">Admin Page</a></li>\r\n  \r\n</ul>\r\n  \r\n\r\n\r\n<ul class=\"button\">\r\n  <li class=\"home\"><a href=\"index.htm\">home</a></li>\r\n  <li class=\"aboutus\"><a href=\"about.htm\">about</a></li>\r\n  <li class=\"contact\"><a href=\"contact.htm\">contact</a></li>\r\n</ul>\r\n</div>\n\t\t\t\t\n\t\t\t\n\t\t\t<div id=\"bodyPanel\">\n\t\t\t\t<div id=\"leftPanel\">\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\r\n\r\n\r\n<p class=\"smallText\"><b>Welcome</b> Mostafa Shaban</p>\r\n\r\n<h2>Account Services</h2>\r\n\r\n\r\n\r\n<ul>\r\n  <li><a href=\"openaccount.htm\">Open New Account</a></li>\r\n  <li><a href=\"overview.htm\">Accounts Overview</a></li>\r\n  <li><a href=\"transfer.htm\">Transfer Funds</a></li>\r\n  <li><a href=\"billpay.htm\">Bill Pay</a></li>\r\n  <li><a href=\"findtrans.htm\">Find Transactions</a></li>\r\n  <li><a href=\"updateprofile.htm\">Update Contact Info</a></li>\r\n  <li><a href=\"requestloan.htm\">Request Loan</a></li>\r\n  <li><a href=\"logout.htm\">Log Out</a></li>\r\n</ul>\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t</div>\n\t\t\t\t<div id=\"rightPanel\">\n\t\t\t\t\t\r\n\r\n\r\n<h1 class=\"title\">Error!</h1>\r\n\r\n\r\n\r\n<p class=\"error\">An internal error has occurred and has been logged.</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t\r\n\r\n\r\n<div id=\"footermainPanel\">\r\n  <div id=\"footerPanel\">\r\n    <ul>\r\n      <li><a href=\"index.htm\">Home</a>| </li>\r\n      <li><a href=\"about.htm\">About Us</a>| </li>\r\n      <li><a href=\"services.htm\">Services</a>| </li>\r\n      <li><a href=\"http://www.parasoft.com/jsp/products.jsp\">Products</a>| </li>\r\n      <li><a href=\"http://www.parasoft.com/jsp/pr/contacts.jsp\">Locations</a>| </li>\r\n      <li><a href=\"http://forums.parasoft.com/\">Forum</a>| </li>\r\n      <li><a href=\"sitemap.htm\">Site Map</a>| </li>\r\n      <li><a href=\"contact.htm\">Contact Us</a></li>\r\n    </ul>\r\n    <p class=\"copyright\">&copy; Parasoft. All rights reserved.</p>\r\n    <ul class=\"visit\">\r\n      <li>Visit us at:</li>\r\n      <li><a href=\"http://www.parasoft.com/\" target=\"_blank\">www.parasoft.com</a></li>\r\n    </ul>\r\n  </div>\r\n</div>\n\t</body>\n</html>\n"
+				}
+			]
+		}
+	]
+}
