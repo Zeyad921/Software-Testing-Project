@@ -1,0 +1,363 @@
+{
+	"id": "4dcb9ab6-c756-44d0-9041-126c1370c6d1",
+	"name": "Parabank API Tests",
+	"timestamp": "2025-05-09T16:33:12.231Z",
+	"collection_id": "44025947-6fdd8cb8-f88c-42c1-80ba-3711c5b91acd",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 3,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-05-09T16:33:04.345Z",
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "07f0e8f6-9cc2-48cb-bff6-8ee4c1dd06d6",
+			"name": "Valid Login",
+			"url": "https://parabank.parasoft.com/parabank/login.htm",
+			"time": 1522,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				1522
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "08990932-32ad-49ed-a215-572a1470fb77",
+			"name": "Invalid Login",
+			"url": "https://parabank.parasoft.com/parabank/login.htm",
+			"time": 403,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				403
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "26172881-6ae7-4c98-8f8f-534a20b1090d",
+			"name": "Registeration",
+			"url": "https://parabank.parasoft.com/parabank/register.htm",
+			"time": 320,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				320
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ab592875-e33c-482c-a130-3a4c3bc97d71",
+			"name": "Get Account Info",
+			"url": "https://parabank.parasoft.com/parabank/services_proxy/bank/customers/12212/accounts",
+			"time": 382,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				382
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a8d8f28a-3197-45cd-9260-7f01c1b227b0",
+			"name": "Transfer Funds",
+			"url": "https://parabank.parasoft.com/parabank/services_proxy/bank/customers/12345/accounts",
+			"time": 353,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				353
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e13735c5-6ae1-4dce-ac99-b3c22ec1c0cb",
+			"name": "Valid Transfer Fund",
+			"url": "https://parabank.parasoft.com/parabank/services_proxy/bank/transfer?fromAccountId=12345&toAccountId=12345&amount=100&type\t=about:blank&title\t=Method Not Allowed&status\t=405&detail\t=Method 'GET' is not supported.&instance\t=/parabank/services_proxy/bank/transfer",
+			"time": 314,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				314
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7e3da04a-4ff9-4442-97c4-d5a105db9d3f",
+			"name": "Invalid Transfer Funds",
+			"url": "https://parabank.parasoft.com/parabank/services_proxy/bank/transfer?fromAccountId=12345&toAccountId=12345&amount=&type\t=\t\"about:blank\"&title\t=\"Method Not Allowed\"&status\t=405&detail\t=\"Method 'GET' is not supported.\"&instance\t=\"/parabank/services_proxy/bank/transfer\"",
+			"time": 301,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				301
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f47abb65-3081-4471-83c0-3ded58e7ab7d",
+			"name": "Open Account",
+			"url": "https://parabank.parasoft.com/parabank/services/bank/login/john/demo",
+			"time": 369,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				369
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f2aa66cb-bc87-4c56-888b-6e4317695900",
+			"name": "Open Account Saving",
+			"url": "https://parabank.parasoft.com/parabank/services/bank/createAccount?customerId=12212&newAccountType=1&fromAccountId=13566",
+			"time": 384,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				384
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2517ef60-a63c-4a5b-81ac-cb3652c45bc9",
+			"name": "Invalid Open Account",
+			"url": "https://parabank.parasoft.com/parabank/services/bank/createAccount?customerId=12212&newAccountType=1&fromAccountId=99999",
+			"time": 308,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				308
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "03ab4f2d-a228-49c1-84c0-b2825c39a13c",
+			"name": "Valid Open Account",
+			"url": "https://parabank.parasoft.com/parabank/services/bank/createAccount?customerId=12212&newAccountType=1&fromAccountId=13566",
+			"time": 300,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				300
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2101e464-f6cf-426a-834b-73f5c2d536d0",
+			"name": "TC_052 - Search by Valid Transaction ID",
+			"url": "https://parabank.parasoft.com/parabank/services/bank/accounts/21114/transactions?Transaction-ID=28462",
+			"time": 323,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				323
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "3ec8d51a-c959-4d53-a41c-b82f1e52280d",
+			"name": "TC_053 - Search by Invalid Transaction ID",
+			"url": "https://parabank.parasoft.com/parabank/services/bank/transactions/99999999?Transaction-ID=999999",
+			"time": 340,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Invalid transaction returns correct error message": true
+			},
+			"testPassFailCounts": {
+				"Invalid transaction returns correct error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				340
+			],
+			"allTests": [
+				{
+					"Invalid transaction returns correct error message": true
+				}
+			]
+		},
+		{
+			"id": "140632d2-d4e3-45cf-9620-457d6dea27f3",
+			"name": "TC_058 - Valid Bill Pay",
+			"url": "https://parabank.parasoft.com/parabank/billpay.htm",
+			"time": 748,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status is 200": false,
+				"Check if Bill Payment Complete message exists": false
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Check if Bill Payment Complete message exists": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				748
+			],
+			"allTests": [
+				{
+					"Status is 200": false,
+					"Check if Bill Payment Complete message exists": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 6367,
+	"collection": {
+		"requests": [
+			{
+				"id": "07f0e8f6-9cc2-48cb-bff6-8ee4c1dd06d6",
+				"method": "POST"
+			},
+			{
+				"id": "08990932-32ad-49ed-a215-572a1470fb77",
+				"method": "POST"
+			},
+			{
+				"id": "26172881-6ae7-4c98-8f8f-534a20b1090d",
+				"method": "POST"
+			},
+			{
+				"id": "ab592875-e33c-482c-a130-3a4c3bc97d71",
+				"method": "GET"
+			},
+			{
+				"id": "a8d8f28a-3197-45cd-9260-7f01c1b227b0",
+				"method": "GET"
+			},
+			{
+				"id": "e13735c5-6ae1-4dce-ac99-b3c22ec1c0cb",
+				"method": "POST"
+			},
+			{
+				"id": "7e3da04a-4ff9-4442-97c4-d5a105db9d3f",
+				"method": "POST"
+			},
+			{
+				"id": "f47abb65-3081-4471-83c0-3ded58e7ab7d",
+				"method": "GET"
+			},
+			{
+				"id": "f2aa66cb-bc87-4c56-888b-6e4317695900",
+				"method": "POST"
+			},
+			{
+				"id": "2517ef60-a63c-4a5b-81ac-cb3652c45bc9",
+				"method": "POST"
+			},
+			{
+				"id": "03ab4f2d-a228-49c1-84c0-b2825c39a13c",
+				"method": "POST"
+			},
+			{
+				"id": "2101e464-f6cf-426a-834b-73f5c2d536d0",
+				"method": "GET"
+			},
+			{
+				"id": "3ec8d51a-c959-4d53-a41c-b82f1e52280d",
+				"method": "GET"
+			},
+			{
+				"id": "140632d2-d4e3-45cf-9620-457d6dea27f3",
+				"method": "POST"
+			}
+		]
+	}
+}
